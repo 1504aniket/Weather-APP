@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body class="light">
+  <div class="container">
+    <header>
+      <h1>Weather Forecast</h1>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+          <span class="toggle-icon light-icon">☀️</span>
+          <span class="toggle-icon dark-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for a city...">
+      <button id="search-btn">Search</button>
+      <button id="location-btn" title="Use current location">📍</button>
+    </div>
+
+    <div class="weather-container">
+      <div class="current-weather">
+        <div class="location-info">
+          <h2 id="location">Loading...</h2>
+          <p id="date">--</p>
+        </div>
+        <div class="weather-info">
+          <div class="temperature">
+            <span id="temperature">--</span>
+            <span class="unit">°C</span>
+          </div>
+          <div class="weather-condition">
+            <div id="weather-icon" class="weather-icon"></div>
+            <p id="condition">--</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail-item">
+          <span class="detail-icon">💧</span>
+          <div class="detail-info">
+            <p class="detail-label">Humidity</p>
+            <p id="humidity" class="detail-value">--%</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">💨</span>
+          <div class="detail-info">
+            <p class="detail-label">Wind Speed</p>
+            <p id="wind-speed" class="detail-value">-- km/h</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">🌡️</span>
+          <div class="detail-info">
+            <p class="detail-label">Feels Like</p>
+            <p id="feels-like" class="detail-value">--°C</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">👁️</span>
+          <div class="detail-info">
+            <p class="detail-label">Visibility</p>
+            <p id="visibility" class="detail-value">-- km</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-container">
+        <h3>3-Day Forecast</h3>
+        <div class="forecast-items" id="forecast-items">
+          <!-- Forecast items will be added here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created with ❤️ | Weather data from openweatherAPI</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
